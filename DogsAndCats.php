@@ -24,13 +24,19 @@ class Cat
     }
 }
 
-for ($counter=0; $counter <= 100; $counter++){
-
-$fido = new Dog();
-// echo $fido->getStrength();
+for ($counter=1; $counter <= 100; $counter++){
+$fido = new Dog(); 
+$fido->name = (string)$counter;
+$dogHouse[] = $fido;
 
 $fifi = new Cat();
-// echo $fifi->getStrength();
+$fifi->name = (string)$counter;
+$catHouse[] = $fifi;
+
 }
+
+var_dump($dogHouse);
+var_dump($catHouse);
+
 
 ?>
