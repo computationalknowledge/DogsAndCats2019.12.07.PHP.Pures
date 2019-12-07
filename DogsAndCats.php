@@ -42,8 +42,17 @@ $catHouse[] = $fifi;
 
 for ($battle=1; $battle <= 100; $battle++){
 	$catCompetitor = array_pop($catHouse);
+	$dogCompetitor = array_pop($dogHouse);
+	if ($dogCompetitor->getStrength() > $catCompetitor->getStrength()){
+		$NumberOfDogWinners++;
+	}
+	if ($catCompetitor->getStrength() > $dogCompetitor->getStrength()){
+		$NumberOfCatWinners++;
+	}
 }
+echo "Cat Winners: ".$NumberOfCatWinners."\r\n";
+echo "Dog Winners: ".$NumberOfDogWinners."\r\n";
 
-
-var_dump($dogHouse);
-var_dump($catHouse);
+//var_dump($dogHouse);
+//var_dump($catHouse);
+?>
