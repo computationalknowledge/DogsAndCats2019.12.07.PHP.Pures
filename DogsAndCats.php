@@ -1,6 +1,9 @@
 <?php
 $dogHouse = array();
 $catHouse = array();
+$NumberOfDogWinners = 0;
+$NumberOfCatWinners = 0;
+
 $breeds = array("frenchie", "alsanse", "atlantic", "swiss", "woodland" );
 class Dog
 {
@@ -35,11 +38,12 @@ $fifi = new Cat();
 $fifi->name = (string)$counter;
 $fifi->breed = (string)$breeds[rand(0,4)];
 $catHouse[] = $fifi;
-
 }
+
+for ($battle=1; $battle <= 100; $battle++){
+	$catCompetitor = array_pop($catHouse);
+}
+
 
 var_dump($dogHouse);
 var_dump($catHouse);
-
-
-?>
